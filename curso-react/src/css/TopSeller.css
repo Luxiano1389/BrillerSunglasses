@@ -1,0 +1,41 @@
+.lente-tostado {
+    width: 400px;
+}
+
+.titulo {
+    font-family: var(--font-family-texto);
+    margin-bottom: 40px;
+}
+
+.contenedor-topS {
+    margin-top: 490px;
+}
+
+.contenedor-topSeller {
+    font-family: var(--font-family-texto);
+    width: 40%;
+}
+
+.contenedor-topSeller h2 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contenedor-topSeller h1 {
+    font-size: 40px ;
+    font-weight: 700;
+}
+
+.contenedor-topSeller p {
+    font-size: 25px;
+    color: gray;
+}
+
+.contenedor-topSeller button {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.contenedor-topSeller hr {
+    width: 90%;
+}
