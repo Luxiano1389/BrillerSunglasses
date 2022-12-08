@@ -1,23 +1,28 @@
 import React from "react";
 import ItemListContainer from "./components/ItemListContainer";
+import BannerAnuncios from "./components/BannerAnuncios";
 import Navbar from "./components/Navbar";
-import VideoBanner from "./components/VideoBanner";
-import ProductosBanner from "./components/ProductosBanner";
-import TopSeller from "./components/TopSeller";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
-import "./App.css";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import Error404 from "./components/Error404";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
-    <div>
-      <ItemListContainer greeting={"Free shipping this week 🕶 cuotas sin interés"} />
-      <Navbar />
-      <VideoBanner />
-      <ProductosBanner />
-      <TopSeller />
-      <Footer />
-    </div>
+      <BrowserRouter>
+        <BannerAnuncios greeting={"free shipping this week 🕶 cuotas sin interés"} />
+        <Navbar />
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/category"} element={<ItemListContainer />} />
+          <Route path={"/category/:id"} element={<ItemListContainer />} />
+          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+          <Route path={"*"} element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
   );
 }
 

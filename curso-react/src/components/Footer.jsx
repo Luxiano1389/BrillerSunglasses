@@ -11,9 +11,9 @@ const Footer = () => {
                     <span className="submarca1">sunglasses</span>
                 </div>
                 <div className="col-md-6 contenedor-links1 d-flex justify-content-end">
-                    <a href="">Home</a>
+                    {/* <a href="">Home</a>
                     <a href="">LENTES DE VISTA</a>
-                    <a href="">LENTES DE SOL</a>
+                    <a href="">LENTES DE SOL</a> */}
                 </div>
             </div>
             <div className="col">

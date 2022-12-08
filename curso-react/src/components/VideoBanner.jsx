@@ -4,6 +4,7 @@ import "../css/VideoBanner.css"
 const VideoBanner = () => {
 
     let videoBanner = "videos/video.mp4";
+    
     return (
         <div className="video-contenedor container-fluid">
             <video controls loop muted autoPlay>

@@ -27,13 +27,6 @@
     font-family: var(--font-family-texto);
 }
 
-.contenedor-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .contenedor-enlaces {
     margin-bottom: 20px;
     font-family: var(--font-family-texto);
@@ -57,11 +50,15 @@
 }
 
 .carrito {
-    margin-right: -1099px;
+    margin-right: -590px;
 }
 
 .btn-link {
     color: black !important;
+}
+
+.contenedor-home {
+    height: 100%;
 }
 
 

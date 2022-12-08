@@ -8,7 +8,8 @@
 }
 
 .contenedor-topS {
-    margin-top: 490px;
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
 
 .contenedor-topSeller {
@@ -16,26 +17,47 @@
     width: 40%;
 }
 
-.contenedor-topSeller h2 {
+.contenedor-topSeller > h2 {
     font-size: 20px;
     margin-bottom: 40px;
 }
 
-.contenedor-topSeller h1 {
+.contenedor-topSeller > h1 {
     font-size: 40px ;
     font-weight: 700;
 }
 
-.contenedor-topSeller p {
+.contenedor-topSeller > p {
     font-size: 25px;
     color: gray;
 }
 
-.contenedor-topSeller button {
+.contenedor-topSeller > button {
     margin-top: 10px;
     width: 90%;
 }
 
-.contenedor-topSeller hr {
+.contenedor-topSeller > hr {
     width: 90%;
+}
+
+.offcanvas-title {
+    letter-spacing: 3px !important;
+    font-weight: 800;
+}
+
+.imagen-carrito > img {
+    width: 115px;
+    height: 115px;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+
+.detalles-producto {
+    font-size: 15px !important;
+    margin-top: 25px;
+    color: black !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
 }

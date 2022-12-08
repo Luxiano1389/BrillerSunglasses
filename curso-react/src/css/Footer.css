@@ -1,7 +1,5 @@
 .contenedor-footer {
     background-color: var(--color-footer);
-    margin-top: 50px;
-    margin-bottom: 0;
 }
 
 .contenedor-marca {
@@ -47,4 +45,5 @@
     margin-left: 15px;
     margin-bottom: 0;
     padding-bottom: 20px;
+    letter-spacing: .6px;
 }
