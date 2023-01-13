@@ -1,33 +1,49 @@
+.item-detail-container {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
 .card {
     width: 18rem;
     font-family: var(--font-family-texto);
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.card-precio {
+    font-weight: 600;
+    color: gray;
 }
 
 .detalle-productos {
     font-family: var(--font-family-texto);
+    letter-spacing: .2em;
 }
 
 .detalle-productos > h1 {
-    font-size: 40px ;
+    font-size: 20px ;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .detalle-productos > span {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     color: gray;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .detalle-productos > p {
-    font-size: 18px;
-    line-height: 2rem;
-    text-align: justify;
+    font-size: 15px;
+    line-height: 1.8rem;
+    font-weight: 400;
 }
 
 .contenedor-imagen > img {
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .contenedor-imagen > img:hover {
@@ -46,11 +62,11 @@
 .item-list-container {
     height: 100% !important;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .item-detail-container {
-    margin-top: 50px;
-    height: 90vh !important;
+    height: 100vh !important;
 }
 
 .error-contenedor {
@@ -61,4 +77,73 @@
 
 .error-contenedor > span {
     font-size: 80px;
+}
+
+.contenedor-carrito {
+    width: 100%;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 0;
+    padding: 14px 28px !important;
+}
+
+.btn-anadir {
+    margin-top: 20px;
+}
+
+.carrito-precio {
+    font-weight: 700;
+    color: gray;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.carrito-item {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .item-detail-container {
+        margin-bottom: 100vh;
+        margin-top: 0;
+    }
+
+    .item-list-container {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .me-5 {
+        margin-right: 0 !important;
+    }
+
+    .detalle-productos > h1 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .detalle-productos > span {
+        text-align: center;
+    }
+
+    .detalle-productos > p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .contenedor-btn-caja > .btn-caja {
+        font-size: 12px !important;
+        width: 90%;
+        padding: 14px 28px;
+    }
+
+    .contenedor-btn-caja {
+        display: flex;
+        justify-content: center;
+    }
 }

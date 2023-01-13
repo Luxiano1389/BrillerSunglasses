@@ -1,9 +1,12 @@
-.video-contenedor {
-    display: flex;
-    justify-content: center;
-    max-width: 1350px;
+video {
+    width: 100%;
+    margin-top: 50px;
 }
 
-.video-contenedor video {
-    width: 1350px;
+@media (max-width: 600px) {
+
+    video {
+        width: 100%;
+        margin-top: 0px;
+    }
 }

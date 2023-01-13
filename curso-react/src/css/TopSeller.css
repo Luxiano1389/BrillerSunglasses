@@ -4,7 +4,11 @@
 
 .titulo {
     font-family: var(--font-family-texto);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
     margin-bottom: 40px;
+    letter-spacing: .2em;
 }
 
 .contenedor-topS {
@@ -23,18 +27,21 @@
 }
 
 .contenedor-topSeller > h1 {
-    font-size: 40px ;
+    font-size: 30px ;
     font-weight: 700;
+    letter-spacing: .2em;
 }
 
 .contenedor-topSeller > p {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 600;
     color: gray;
 }
 
 .contenedor-topSeller > button {
     margin-top: 10px;
     width: 90%;
+    text-transform: uppercase;
 }
 
 .contenedor-topSeller > hr {
@@ -57,7 +64,67 @@
     font-size: 15px !important;
     margin-top: 25px;
     color: black !important;
-    font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: none;
     text-decoration: none;
+}
+
+.detalles-producto:hover {
+    color: gray !important;
+}
+
+.btn-detalles {
+    width: 90%;
+}
+
+@media (max-width: 600px) {
+
+    .lente-tostado {
+        width: 100%;
+    }
+
+    .contenedor-topSeller {
+        font-family: var(--font-family-texto);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contenedor-topSeller > h2 {
+        display: none;
+    }
+
+    .contenedor-topSeller > h1 {
+        font-size: 20px ;
+        font-weight: 700;
+        letter-spacing: .2em;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contenedor-topSeller > p {
+        font-size: 20px;
+        font-weight: 600;
+        color: gray;
+        text-align: center;
+    }
+
+    .contenedor-topSeller > button {
+        margin-top: 10px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+    
+    .contenedor-topSeller > hr {
+        width: 100%;
+    }
+
+    .btn-detalles {
+        width: 100%;
+    }
+
+    .contenedor-topS {
+        margin-top: 40px;
+    }
+    
 }

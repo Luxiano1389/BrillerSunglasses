@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Navbar.css"
 
-const BannerAnuncios = ({greeting}) => {
+const BannerAnuncios = ({ greeting }) => {
     return (
         <div className="anuncios">
             {greeting}

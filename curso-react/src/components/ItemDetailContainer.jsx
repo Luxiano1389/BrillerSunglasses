@@ -1,9 +1,9 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import Spinner from "./Spinner";
-import { productos } from "../data/productos";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
 
@@ -12,15 +12,13 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const promesas = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos.find(listaProductosDetalle => listaProductosDetalle.id === id))
-            }, 2000);
-        });
-
-        promesas.then((data) => {
-            setLoading(false)
-            setListaProductosDetalle(data)
+        const db = getFirestore();
+        const items = doc(db, "productos", id);
+        getDoc(items).then((data) => {
+            if (data.exists()) {
+                setListaProductosDetalle({ id: data.id, ...data.data() });
+                setLoading(false);
+            }
         })
     }, [id]);
 

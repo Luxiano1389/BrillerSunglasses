@@ -1,10 +1,11 @@
 .item-count {
     border: 1px solid rgb(162, 163, 165);
-    border-radius: 0.375rem;
+    border-radius: 0;
     text-align: center;
     font-family: var(--font-family-texto);
     padding: 0 20px;
     height: 40px;
+    margin-top: 20px;
 }
 
 .item-count > h2 {
@@ -36,8 +37,49 @@
 }
 
 .btn-caja {
-    font-size: 1rem;
-    padding: 0.375rem 0.75rem;
-    letter-spacing: 1.2px;
+    font-size: 14px !important;
+    padding: 0.375rem 1.8rem;
+    width: 90%;
+    letter-spacing: .2em;
+    margin-top: 20px;
 }
+
+.btn-agregar {
+    font-size: 14px;
+    padding: 0.375rem 1.8rem;
+    width: 90%;
+    letter-spacing: .2em;
+    margin-top: 20px;
+}
+
+.btn-eliminar {
+    text-transform: uppercase;
+    font-size: 12px !important;
+}
+
+.mensaje-carrito {
+    letter-spacing: normal;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    width: 90%;
+}
+
+@media (max-width: 600px) {
+
+    .mensaje-carrito {
+        font-size: 12px ;
+        width: 100%;
+    }
+
+    .btn-agregar {
+        font-size: 12px;
+        padding: 14px 28px;
+    }
+
+    .justify-content-start {
+        justify-content: center !important;
+    }
+}
+
 

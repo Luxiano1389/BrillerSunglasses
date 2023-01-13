@@ -1,13 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/ItemCount.css";
 
-const ItemCount = ({ inicio, stock }) => {
 
-    const [conteo, setConteo] = useState(inicio)
+const ItemCount = ({ inicio, stock, onAdd }) => {
+
+    const [conteo, setConteo] = useState(inicio);
+    const [itemStock, setItemStock] = useState(stock);
+    const [venta, setVenta] = useState(false);
 
     const incrementar = () => {
-        if (conteo < stock) {
+        if (conteo < itemStock) {
             setConteo(conteo + 1);
         }
     }
@@ -18,11 +20,18 @@ const ItemCount = ({ inicio, stock }) => {
         }
     }
 
-    const onAdd = () => {
-        if (stock > 0) {
-            alert("Agregaste " + conteo + " producto/s")
+    const agregarAlCarrito = (cantidad) => {
+        if (itemStock >= conteo) {
+            setConteo(1);
+            setItemStock(itemStock - cantidad);
+            setVenta(true);
+            onAdd(cantidad);
         }
     }
+
+    useEffect(() => {
+        setItemStock(stock)
+    }, [stock])
 
     return (
         <div>
@@ -32,13 +41,11 @@ const ItemCount = ({ inicio, stock }) => {
                     <h2>{conteo}</h2>
                     <button type="button" onClick={incrementar}>+</button>
                 </div>
-                <div className="eliminar d-flex align-items-center">
-                    <button type="button">Eliminar</button>
-                </div>
             </div>
-            <div className="d-flex justify-content-start mt-5">
-                <button type="button" className="btn btn-dark btn-caja" onClick={onAdd}>Pasar por caja</button>
+            <div className="d-flex justify-content-start">
+                <button type="button" className="btn btn-outline-dark btn-agregar" onClick={() => { agregarAlCarrito(conteo) }}>AÑADIR AL CARRITO</button>
             </div>
+            {venta ? <p className="mensaje-carrito text-center ">Item agregado con éxito al carrito</p> : ""}
         </div>
     )
 }
