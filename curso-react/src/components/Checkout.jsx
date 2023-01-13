@@ -33,7 +33,7 @@ const Checkout = () => {
         <div className="contenedor-checkout">
             <div className="container">
                 <div className="row">
-                    {orderId != "" ?
+                    {orderId !== "" ?
                         <div className="alert alerta text-center orden" role="alert">¡Su orden <b>{orderId}</b> ha sido generada con éxito! <br /> Recibirá un e-mail con los detalles de su compra. <br /><b>Gracias por elegirnos.</b></div>
                         : ""}
                     <div className="col-md-6 formulario">
@@ -81,12 +81,12 @@ const Checkout = () => {
                                 {cart.map(item => (
                                     <tr key={item.id}>
                                         <div className="position-relative mt-3">
-                                            <td scope="row"><img src={item.imagen} alt={item.nombre} width={100} /></td>
+                                            <td><img src={item.imagen} alt={item.nombre} width={100} /></td>
                                             <span className="mensaje">
                                                 {item.cantidad}</span>
                                         </div>
-                                        <td scope="row" className="nombre-carrito">{item.nombre}</td>
-                                        <td scope="row" className="text-end total-carrito">${Math.round(item.cantidad * item.precio)}.000</td>
+                                        <td className="nombre-carrito">{item.nombre}</td>
+                                        <td className="text-end total-carrito">${Math.round(item.cantidad * item.precio)}.000</td>
                                     </tr>
                                 ))}
                                 <tr className="tabla-carrito1">
